@@ -165,5 +165,20 @@ CREATE TABLE IF NOT EXISTS MovieTimes (
     CONSTRAINT movie_time PRIMARY KEY (mt_movieID , mt_time)
 );
 
+DROP TABLE UserRating;
+
+CREATE TABLE IF NOT EXISTS UserRating (
+    ur_ID INT NOT NULL,
+    ur_UserID INT,
+    ur_Rating INT NOT NULL,
+    ur_MovieID INT NOT NULL,
+    FOREIGN KEY (ur_UserID)
+        REFERENCES Customer (c_ID),
+    FOREIGN KEY (ur_MovieID)
+        REFERENCES Movie (m_ID),
+    PRIMARY KEY (ur_ID)
+);
+
+SHOW TABLES;
 
 
