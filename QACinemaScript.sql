@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS Employee (
     e_DOB DATE NOT NULL,
     e_Landline VARCHAR(20),
     e_Mobile VARCHAR(20),
+	e_email VARCHAR(30) NOT NULL,
     PRIMARY KEY (e_ID)
 );
 
@@ -26,6 +27,8 @@ CREATE TABLE IF NOT EXISTS Customer (
     c_LName VARCHAR(20) NOT NULL,
     c_DOB DATE NOT NULL,
     c_email VARCHAR(30) NOT NULL,
+	c_Landline VARCHAR(20),
+    c_Mobile VARCHAR(20),
     PRIMARY KEY (c_ID)
 );
 
